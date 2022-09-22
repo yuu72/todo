@@ -1,0 +1,28 @@
+<!--            🔻継承-->
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="bg-light p-3 p-sm-5 mb-4 border-top">
+    <div class="container">
+      <h1 class="display-4">詳細画面</h1>
+      <p class="lead">todoの詳細です。</p>
+      <hr class="my-4">
+      
+    </div>
+  </div>
+  <div class="container mt-2">
+    
+  </div>
+{% endblock %}
+
+{% block content %}
+<!--        🔻幅を調整することができる-->
+<div class='container'>
+    <div class="alert alert-success" role="alert">
+        <!--        🔻detailviewの場合　objectで指定された番号を呼び出すことだできる-->
+        <p>タイトル：{{ object.title }}</p>
+        <p>中身：{{ object.memo }}</p>
+        <p>期日：{{ object.duedate }}</p>
+      </div>
+</div>
+{% endblock content %}

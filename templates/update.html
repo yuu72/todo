@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}         <!--   🔻セキュリティ対策-->
+<form action='' method='POST'>{% csrf_token %}
+    <!--  🔻formの指定  createの場合はasで指定したpタグで。modelのそれぞれの項目を指定-->
+{{ form.title }}
+{{ form.memo }}
+{{ form.priority }}
+{{ form.duedate }}
+    <input type='submit' value='更新する'>
+</form>
+{% endblock content %}

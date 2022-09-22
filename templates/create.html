@@ -1,0 +1,12 @@
+<!--    urlsでpassを指定する-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<!--    🔻ボタンを押した後にどこに飛ばすか、何も指定しないと同じ場所に帰ってくる-->
+<form action= "" method="POST">{% csrf_token %}
+
+    {{form.as_p}}
+    <input type="submit" value="作成する">
+</form>
+{% endblock content %}
